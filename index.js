@@ -3,6 +3,7 @@ const express = require("express");
 require("dotenv").config();
 
 const route = require("./routes/client/index.route");
+const routeAdmin = require("./routes/admin/index.route");
 
 const database = require("./config/database.js");
 database.connect();
@@ -16,7 +17,12 @@ app.use(express.static("public"));
 app.set("views", "./views");
 app.set("view engine", "pug");
 
+// Tạo ra các biến toàn cục có thể dùng được ở các file .pug
+const systemConfig  = require("./config/system.js");
+app.locals.prefixAdmin = systemConfig.prefixAdmin;
+
 //Routes
+routeAdmin(app);
 route(app);
 
 app.listen(port, () =>{
