@@ -6,21 +6,29 @@ block main
     .card.mb-3
         .card-header Bộ lọc và Tìm kiếm
         .card-body
-            each item in filterStatus
-                button(
-                    class=`btn btn-sm ml-1 btn-outline-success ${item.class}`
-                    button-status=item.status
-                ) #{item.name}
+            .row
+                .col-6
+                    each item in filterStatus
+                        button(
+                            class=`btn btn-sm ml-1 btn-outline-success ${item.class}`
+                            button-status=item.status
+                        ) #{item.name}
 
-            //- button(
-            //-     class="btn btn-sm ml-1 btn-outline-success"
-            //-     button-status="active"
-            //- ) Hoạt động
-            //- button(
-            //-     class="btn btn-sm ml-1 btn-outline-success"
-            //-     button-status="inactive"
-            //- ) Dừng hoạt động
-
+                .col-6
+                    form(id="form-search")
+                        .input-group
+                            input(
+                                type="text"
+                                placeholder="Nhập từ khóa"
+                                name="keyword"
+                                class="form-control"
+                                value=keyword
+                            )
+                            .input-group-append
+                                button(
+                                    class="btn btn-success"
+                                    type="submit"
+                                ) Tìm
 
     .card.mb-3
         .card-header Danh sách
@@ -30,7 +38,7 @@ block main
                         tr
                             th STT
                             th Hình ảnh
-                            th Tiêu đề
+                            th Tên sản phẩm
                             th Giá
                             th Trạng thái
                             th Hành động
@@ -56,18 +64,3 @@ block main
                                     button(class="btn btn-warning btn-sm") Sửa
                                     button(class="btn btn-danger btn-sm ml-1") Xóa
 
-                        //- tr
-                        //-     td 2
-                        //-     td
-                        //-         img(
-                        //-             src="/images/iphone9.jpg"
-                        //-             alt="Sản phẩm 2"
-                        //-             width="100px"
-                        //-             height="auto")
-                        //-     td Sản phẩm 2
-                        //-     td 150$
-                        //-     td
-                        //-         a(href="#" class="badge badge-danger") Dừng hoạt động
-                        //-     td
-                        //-         button(class="btn btn-warning btn-sm") Sửa
-                        //-         button(class="btn btn-danger btn-sm ml-1") Xóa
