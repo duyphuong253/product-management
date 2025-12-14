@@ -24,7 +24,7 @@ module.exports.index = async (req, res) =>{
 
     // Pagination //
     const countProducts = await Product.countDocuments(find);
-    let objectPagination = paginationHelper(
+    let objectPagination = await paginationHelper(
         {
         currentPage: 1,
         limitItem: 4
@@ -45,4 +45,14 @@ module.exports.index = async (req, res) =>{
         keyword: objectSearch.keyword,
         pagination: objectPagination
     });
+}
+
+// [GET] /admin/products/change-status/:status/:id
+module.exports.changeStatus = async (req, res) =>{
+    const status = req.params.status;
+    const id = req.params.id;
+
+    await Product.updateOne({_id: id}, {status: status});
+
+    res.redirect("/admin/products")
 }
