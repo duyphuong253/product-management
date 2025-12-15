@@ -2,7 +2,8 @@ const Product = require("../../models/product.model");
 
 // [GET] /products
 module.exports.index = async (req, res) =>{
-    const products = await Product.find({
+    const products = await Product.find
+    .sort({position: "desc"})({
         status: "active",
         deleted: false
     });
