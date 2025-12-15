@@ -1,6 +1,9 @@
 const express = require("express");
 const methodOverride = require("method-override");
 const bodyParser = require("body-parser");
+const flash = require('express-flash');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
 require("dotenv").config();
 
 const route = require("./routes/client/index.route");
@@ -16,6 +19,12 @@ app.use(methodOverride("_method"));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static("public"));
+
+// Cấu hình để sử dụng express-flash
+app.use(cookieParser('keybaomattudinhnghia'));
+app.use(session({ cookie: { maxAge: 60000 }}));
+app.use(flash());
+// End flash
 
 // Cấu hình để sử dụng pug
 app.set("views", "./views");
