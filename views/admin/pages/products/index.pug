@@ -10,7 +10,8 @@ block main
         .col-6
             h1 Danh sách sản phẩm
         .col-6
-            +alert-success(5000)
+            +alert-success(4000)
+            +alert-error(3000)
     .card.mb-3
         .card-header Bộ lọc và Tìm kiếm
         .card-body
@@ -91,7 +92,10 @@ block main
                                             button-change-status
                                         ) Dừng hoạt động
                                 td
-                                    button(class="btn btn-warning btn-sm") Sửa
+                                    a(
+                                        href=`${prefixAdmin}/products/edit/${item.id}`
+                                        class="btn btn-warning btn-sm"
+                                        ) Sửa
                                     button(
                                         class="btn btn-danger btn-sm ml-1"
                                         button-delete
