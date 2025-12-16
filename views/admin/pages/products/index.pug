@@ -3,18 +3,14 @@ include ../../mixins/filter-status.pug
 include ../../mixins/search.pug
 include ../../mixins/pagination.pug
 include ../../mixins/form-change-multi.pug
+include ../../mixins/alert-success.pug
 
 block main
-    -   if(messages.success)
-        .message.info
-            div(
-                class="alert alert-success"
-                show-alert
-                data-time="5000"
-            ) #{messages.success} <span close-alert>x</span>
-
-    h1 Danh sách sản phẩm
-
+    .row
+        .col-6
+            h1 Danh sách sản phẩm
+        .col-6
+            +alert-success(5000)
     .card.mb-3
         .card-header Bộ lọc và Tìm kiếm
         .card-body
@@ -27,7 +23,14 @@ block main
     .card.mb-3
         .card-header Danh sách
             .card-body
-                +form-change-multi(`${prefixAdmin}/products/change-multi?_method=PATCH`)
+                .row
+                    .col-8
+                        +form-change-multi(`${prefixAdmin}/products/change-multi?_method=PATCH`)
+                    .col-4
+                        a(
+                            href=`${prefixAdmin}/products/create`
+                            class="btn btn-outline-success"
+                        )   + Thêm mới
                 table(
                     class="table table-hover table-sm"
                     checkbox-multi
