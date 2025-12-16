@@ -1,0 +1,278 @@
+[{
+  "_id": {
+    "$oid": "69380df5731570d0b98ce6c9"
+  },
+  "title": "iPhone 14 Pro Max",
+  "description": "Flagship của Apple với màn hình Super Retina XDR, chip A16 Bionic mạnh mẽ.",
+  "price": 1199,
+  "discountPercentage": 5,
+  "stock": 35,
+  "thumbnail": "https://images.pexels.com/photos/34624326/pexels-photo-34624326.jpeg",
+  "status": "inactive",
+  "position": 1,
+  "deleted": false
+},{
+  "_id": {
+    "$oid": "69380df5731570d0b98ce6ca"
+  },
+  "title": "Samsung Galaxy S23 Ultra",
+  "description": "Điện thoại cao cấp với camera 200MP và màn hình Dynamic AMOLED 2X.",
+  "price": 1099,
+  "discountPercentage": 8,
+  "stock": 50,
+  "thumbnail": "https://images.pexels.com/photos/34624326/pexels-photo-34624326.jpeg",
+  "status": "inactive",
+  "position": 2,
+  "deleted": false
+},{
+  "_id": {
+    "$oid": "69380df5731570d0b98ce6cb"
+  },
+  "title": "Xiaomi 13 Pro",
+  "description": "Hiệu năng mạnh với Snapdragon 8 Gen 2, camera Leica tối ưu.",
+  "price": 899,
+  "discountPercentage": 10,
+  "stock": 60,
+  "thumbnail": "https://images.pexels.com/photos/34624326/pexels-photo-34624326.jpeg",
+  "status": "active",
+  "position": 3,
+  "deleted": false
+},{
+  "_id": {
+    "$oid": "69380df5731570d0b98ce6cc"
+  },
+  "title": "OPPO Find X6 Pro",
+  "description": "Camera hàng đầu với cảm biến lớn, sạc siêu nhanh SuperVOOC.",
+  "price": 999,
+  "discountPercentage": 7,
+  "stock": 40,
+  "thumbnail": "https://images.pexels.com/photos/34624326/pexels-photo-34624326.jpeg",
+  "status": "inactive",
+  "position": 4,
+  "deleted": false
+},{
+  "_id": {
+    "$oid": "69380df5731570d0b98ce6cd"
+  },
+  "title": "Google Pixel 8 Pro",
+  "description": "Máy ảnh AI hàng đầu, chạy Android gốc với các tính năng thông minh.",
+  "price": 899,
+  "discountPercentage": 6,
+  "stock": 45,
+  "thumbnail": "https://images.pexels.com/photos/34624326/pexels-photo-34624326.jpeg",
+  "status": "inactive",
+  "position": 5,
+  "deleted": false
+},{
+  "_id": {
+    "$oid": "693b720da5f7355cfd162cd5"
+  },
+  "title": "iPhone 15 Pro Max",
+  "description": "iPhone 15 Pro Max với chip A17 Pro mạnh mẽ, camera cải tiến và thời lượng pin vượt trội.",
+  "price": 3399,
+  "discountPercentage": 5,
+  "stock": 25,
+  "thumbnail": "https://images.pexels.com/photos/34624326/pexels-photo-34624326.jpeg",
+  "status": "active",
+  "position": 1,
+  "deleted": false
+},{
+  "_id": {
+    "$oid": "693b720da5f7355cfd162cd6"
+  },
+  "title": "Samsung Galaxy S24 Ultra",
+  "description": "Samsung Galaxy S24 Ultra với màn hình Dynamic AMOLED 2X, camera 200MP và hiệu năng mạnh mẽ.",
+  "price": 2899,
+  "discountPercentage": 7,
+  "stock": 30,
+  "thumbnail": "https://images.pexels.com/photos/34624326/pexels-photo-34624326.jpeg",
+  "status": "inactive",
+  "position": 2,
+  "deleted": false
+},{
+  "_id": {
+    "$oid": "693b720da5f7355cfd162cd7"
+  },
+  "title": "Xiaomi 14 Pro",
+  "description": "Xiaomi 14 Pro với Snapdragon 8 Gen 3, sạc nhanh 120W và camera Leica sắc nét.",
+  "price": 1999,
+  "discountPercentage": 10,
+  "stock": 40,
+  "thumbnail": "https://images.pexels.com/photos/34624326/pexels-photo-34624326.jpeg",
+  "status": "active",
+  "position": 3,
+  "deleted": false
+},{
+  "_id": {
+    "$oid": "693b720da5f7355cfd162cd8"
+  },
+  "title": "OPPO Find X7",
+  "description": "OPPO Find X7 với thiết kế sang trọng, camera Hasselblad và hiệu năng cao.",
+  "price": 1699,
+  "discountPercentage": 8,
+  "stock": 35,
+  "thumbnail": "https://images.pexels.com/photos/34624326/pexels-photo-34624326.jpeg",
+  "status": "active",
+  "position": 4,
+  "deleted": false
+},{
+  "_id": {
+    "$oid": "693b720da5f7355cfd162cd9"
+  },
+  "title": "Vivo X100 Pro",
+  "description": "Vivo X100 Pro sở hữu camera ZEISS, chip Dimensity 9300 và pin lớn cho trải nghiệm bền bỉ.",
+  "price": 2199,
+  "discountPercentage": 9,
+  "stock": 28,
+  "thumbnail": "https://images.pexels.com/photos/34624326/pexels-photo-34624326.jpeg",
+  "status": "active",
+  "position": 5,
+  "deleted": false
+},{
+  "_id": {
+    "$oid": "693b72b3a5f7355cfd162cdb"
+  },
+  "title": "iPhone 14 Pro",
+  "description": "iPhone 14 Pro với màn hình ProMotion 120Hz, Dynamic Island và camera 48MP.",
+  "price": 2599,
+  "discountPercentage": 6,
+  "stock": 20,
+  "thumbnail": "https://images.pexels.com/photos/34624326/pexels-photo-34624326.jpeg",
+  "status": "active",
+  "position": 6,
+  "deleted": false
+},{
+  "_id": {
+    "$oid": "693b72b3a5f7355cfd162cdc"
+  },
+  "title": "Samsung Galaxy Z Flip 5",
+  "description": "Galaxy Z Flip 5 màn hình gập thế hệ mới, thiết kế nhỏ gọn và hiệu năng mạnh mẽ.",
+  "price": 2499,
+  "discountPercentage": 12,
+  "stock": 27,
+  "thumbnail": "https://images.pexels.com/photos/34624326/pexels-photo-34624326.jpeg",
+  "status": "active",
+  "position": 7,
+  "deleted": false
+},{
+  "_id": {
+    "$oid": "693b72b3a5f7355cfd162cdd"
+  },
+  "title": "Samsung Galaxy A55",
+  "description": "Galaxy A55 sở hữu thiết kế trẻ trung, camera sắc nét và hiệu năng ổn định.",
+  "price": 899,
+  "discountPercentage": 10,
+  "stock": 50,
+  "thumbnail": "https://images.pexels.com/photos/34624326/pexels-photo-34624326.jpeg",
+  "status": "active",
+  "position": 8,
+  "deleted": false
+},{
+  "_id": {
+    "$oid": "693b72b3a5f7355cfd162cde"
+  },
+  "title": "Xiaomi Redmi Note 13 Pro",
+  "description": "Redmi Note 13 Pro với camera 200MP, hiệu năng mạnh và pin dung lượng lớn.",
+  "price": 799,
+  "discountPercentage": 8,
+  "stock": 60,
+  "thumbnail": "https://images.pexels.com/photos/34624326/pexels-photo-34624326.jpeg",
+  "status": "active",
+  "position": 9,
+  "deleted": false
+},{
+  "_id": {
+    "$oid": "693b72b3a5f7355cfd162cdf"
+  },
+  "title": "Realme 12 Pro+",
+  "description": "Realme 12 Pro+ với camera periscope, màn hình cong và sạc nhanh 67W.",
+  "price": 1099,
+  "discountPercentage": 11,
+  "stock": 45,
+  "thumbnail": "https://images.pexels.com/photos/34624326/pexels-photo-34624326.jpeg",
+  "status": "inactive",
+  "position": 10,
+  "deleted": false
+},{
+  "_id": {
+    "$oid": "693b72b3a5f7355cfd162ce0"
+  },
+  "title": "Google Pixel 8",
+  "description": "Google Pixel 8 với chip Tensor G3, camera AI mạnh mẽ và hiệu năng ổn định.",
+  "price": 1899,
+  "discountPercentage": 9,
+  "stock": 32,
+  "thumbnail": "https://images.pexels.com/photos/34624326/pexels-photo-34624326.jpeg",
+  "status": "active",
+  "position": 11,
+  "deleted": false
+},{
+  "_id": {
+    "$oid": "693b72b3a5f7355cfd162ce1"
+  },
+  "title": "Google Pixel 8 Pro",
+  "description": "Pixel 8 Pro với camera siêu nét, AI thông minh và thời lượng pin tốt.",
+  "price": 2399,
+  "discountPercentage": 7,
+  "stock": 22,
+  "thumbnail": "https://images.pexels.com/photos/34624326/pexels-photo-34624326.jpeg",
+  "status": "active",
+  "position": 12,
+  "deleted": false
+},{
+  "_id": {
+    "$oid": "693b72b3a5f7355cfd162ce3"
+  },
+  "title": "Vivo V30",
+  "description": "Vivo V30 mang đến thiết kế đẹp, camera chân dung xuất sắc và màn hình AMOLED.",
+  "price": 1099,
+  "discountPercentage": 10,
+  "stock": 55,
+  "thumbnail": "https://images.pexels.com/photos/34624326/pexels-photo-34624326.jpeg",
+  "status": "active",
+  "position": 16,
+  "deleted": false
+},{
+  "_id": {
+    "$oid": "693b72b3a5f7355cfd162ce4"
+  },
+  "title": "OPPO Reno11 Pro",
+  "description": "OPPO Reno11 Pro với camera chân dung nổi bật, hiệu năng ổn định và sạc nhanh.",
+  "price": 1399,
+  "discountPercentage": 8,
+  "stock": 20,
+  "thumbnail": "https://images.pexels.com/photos/34624326/pexels-photo-34624326.jpeg",
+  "status": "active",
+  "position": 17,
+  "deleted": false,
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1765882166923"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "694142368650b5c17d18e357"
+  },
+  "title": "Sản phẩm 1",
+  "description": "Vẻ đẹp của Phú Yên là sự kết hợp hài hòa giữa hoang sơ, mộc mạc và thơ mộng, được ví như \"xứ sở hoa vàng trên cỏ xanh\", với những bãi biển xanh biếc (Bãi Xép, Bãi Môn), ghềnh đá độc đáo (Gành Đá Đĩa), và núi non hùng vĩ (Núi Nhạn, Núi Đá Bia). Nơi đây có bờ biển dài, nhiều vịnh, đầm phá, di tích lịch sử văn hóa và ẩm thực phong phú, tạo nên một bức tranh thiên nhiên đa sắc, bình yên, chưa bị du lịch hóa ồ ạt.",
+  "price": 100,
+  "discountPercentage": 10,
+  "stock": 5,
+  "thumbnail": "/uploads/1765884470435-WIN_20250917_01_19_17_Pro.jpg",
+  "status": "active",
+  "position": 20,
+  "deleted": false,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1765884470449"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1765884470449"
+    }
+  },
+  "slug": "san-pham-1",
+  "__v": 0
+}]
