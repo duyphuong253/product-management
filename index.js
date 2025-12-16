@@ -19,7 +19,8 @@ const port = process.env.PORT;
 app.use(methodOverride("_method"));
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(express.static("public"));
+console.log(__dirname);
+app.use(express.static(`${__dirname}/public`));
 
 // Cấu hình để sử dụng express-flash
 app.use(cookieParser('keybaomattudinhnghia'));
@@ -28,7 +29,7 @@ app.use(flash());
 // End flash
 
 // Cấu hình để sử dụng pug
-app.set("views", "./views");
+app.set("views", `${__dirname}/views`);
 app.set("view engine", "pug");
 
 // Tạo ra các biến toàn cục có thể dùng được ở các file .pug
