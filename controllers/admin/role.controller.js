@@ -1,7 +1,7 @@
 const Role = require("../../models/roles.model")
 const systemConfig = require("../../config/system");
 
-// [GET] /admin/role
+// [GET] /admin/roles
 module.exports.index = async (req, res) =>{
     let find = {
         deleted: false,
@@ -22,7 +22,7 @@ module.exports.create = async (req, res) =>{
     });
 }
 
-// [POST] /admin/role/create
+// [POST] /admin/roles/create
 module.exports.createPost = async (req, res) =>{
     console.log(req.body);
 
@@ -31,7 +31,7 @@ module.exports.createPost = async (req, res) =>{
     res.redirect(`${systemConfig.prefixAdmin}/roles`)
 }
 
-// [GET] /admin/role/edit/:id
+// [GET] /admin/roles/edit/:id
 module.exports.edit = async (req, res) =>{
     try {
         const id = req.params.id;
@@ -52,7 +52,7 @@ module.exports.edit = async (req, res) =>{
     }
 }
 
-// [PATCH] /admin/role/edit/:id
+// [PATCH] /admin/roles/edit/:id
 module.exports.editPatch = async (req, res) =>{
     try {
         const id = req.params.id;
@@ -64,4 +64,31 @@ module.exports.editPatch = async (req, res) =>{
         req.flash("error", "Cập nhật thất bại");
         res.redirect("back");
     }
+}
+
+// [GET] /admin/roles/permissions
+module.exports.permissions = async (req, res) =>{
+    let find = {
+        deleted: false
+    };
+
+    const records = await Role.find(find);
+
+    res.render(`admin/pages/roles/permissions`, {
+        pageTitle: "Phân quyền",
+        records: records
+    })
+}
+
+// [PATCH] /admin/roles/permissions
+module.exports.permissionsPatch = async (req, res) =>{
+    const permissions = JSON.parse(req.body.permissions);
+    
+    for(const item of permissions){
+        await Role.updateOne({_id: item.id}, {permissions: item.permissions});
+    }
+    
+    req.flash("success", "Cập nhật phân quyền thành công!");
+
+    res.redirect(`${systemConfig.prefixAdmin}/roles/permissions`);
 }
