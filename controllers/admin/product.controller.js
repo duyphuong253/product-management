@@ -5,6 +5,7 @@ const paginationHelper = require("../../helpers/pagination");
 const systemConfig = require("../../config/system");
 const createTreeHelper = require("../../helpers/create-tree");
 const ProductCategory = require("../../models/products-category.model");
+const Account = require("../../models/account.model");
 
 // [GET] /admin/products
 module.exports.index = async (req, res) =>{
@@ -50,6 +51,16 @@ module.exports.index = async (req, res) =>{
     const products =  await Product.find(find)
     .sort(sort)
     .limit(objectPagination.limitItem).skip(objectPagination.skip);
+
+    for(const product of products){
+        const user = await Account.findOne({
+            _id: product.createBy.account_id
+        });
+
+        if(user){
+            product.accountFullName = user.fullName;
+        }
+    }
 
     // console.log(products);
 
@@ -148,6 +159,10 @@ module.exports.createPost = async (req, res) =>{
         req.body.position = parseInt(req.body.position);
     }
     
+    req.body.createBy = {
+        account_id: res.locals.user.id
+    };
+
     const product = new Product(req.body);
     await product.save();
 
