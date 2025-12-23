@@ -4,9 +4,14 @@ const systemConfig = require("../../config/system");
 
 // [GET] /admin/auth/login
 module.exports.login = (req, res) =>{
-    res.render("admin/pages/auth/login", {
-        pageTitle: "Đăng nhập"
+    if(req.cookies.token){
+        res.redirect(`${systemConfig.prefixAdmin}/dashboard`);
+    } else{
+        res.render("admin/pages/auth/login", {
+            pageTitle: "Đăng nhập"
     });
+    }
+    
 }
 
 // [POST] /admin/auth/login
@@ -46,5 +51,5 @@ module.exports.loginPost = async (req, res) =>{
 module.exports.logout = (req, res) =>{
     //xóa token trong cookie
     res.clearCookie("token");
-    res.redirect(`${systemConfig.prefixAdmin}/admin/auth/login`);
+    res.redirect(`${systemConfig.prefixAdmin}/auth/login`);
 }
