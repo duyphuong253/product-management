@@ -17,7 +17,7 @@ router.get("/create", controller.create);
 router.get("/edit/:id", controller.edit);
 
 router.post(
-    "/create", 
+    "/create",
     upload.single("avatar"),
     uploadCloud.upload,
     validate.createPost,
