@@ -46,54 +46,100 @@
 }
 /* End box-head */
 
-/* product-item */
-.product-item{
+/* Product item */
+.product-item {
+    transition: transform .2s ease, box-shadow .2s ease;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
 }
 
-.product-item .inner-image{
+.product-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,.1);
+}
+
+.product-item .inner-image {
     width: 100%;
-    aspect-ratio: 4/3;
+    aspect-ratio: 4 / 3;
     border-bottom: 1px solid #ddd;
 }
 
-.product-item .inner-image image{
-    width: 10%;
+.product-item .inner-image img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.product-item .inner-content{
+.product-item .inner-content {
     padding: 15px;
 }
 
-.product-item .inner-content .inner-title{
+.product-item .inner-content .inner-title {
     font-size: 20px;
     font-weight: 600;
 }
 
-.product-item .inner-content .inner-price-new{
+.product-item .inner-content .inner-price-new,
+.product-item .inner-content .inner-price-old,
+.product-item .inner-content .inner-discount {
     font-size: 18px;
     font-weight: 600;
+}
+
+.product-item .inner-price-new {
     color: green;
 }
 
-.product-item .inner-content .inner-price-old{
-    font-size: 18px;
-    font-weight: 600;
+.product-item .inner-price-old {
     color: red;
     text-decoration: line-through;
 }
 
-.product-item .inner-content .inner-discount{
-     font-size: 18px;
-    font-weight: 600;
-    color: white;
+.product-item .inner-discount {
+    color: #fff;
     background: red;
     display: inline-block;
     padding: 3px 10px;
     border-radius: 8px;
 }
-/* End product-item */
+/* End product item */
+
+/* Sub menu */
+.sub-menu{
+    position: relative;
+    z-index: 999;
+}
+
+.sub-menu ul {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #eae9e9;
+    min-width: 180px;
+    display: none;
+}
+.sub-menu ul li{
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.sub-menu ul li ul {
+    right: 100%;
+    top: 0;
+}
+
+.sub-menu ul li{
+    position: relative;
+}
+
+.sub-menu:hover > ul {
+    display: block;
+}
+
+.sub-menu ul li:hover > ul {
+    display: block;
+}
+/* End Sub menu */
