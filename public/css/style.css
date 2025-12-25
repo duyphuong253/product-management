@@ -156,3 +156,130 @@
     display: block;
 }
 /* End Sub menu */
+
+
+/* Detail */
+/* ===== PRODUCT DETAIL ===== */
+.product-detail {
+    background-color: #f8f9fa;
+}
+
+/* Thumbnail */
+.product-detail .inner-thumb {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    background: #fff;
+}
+
+.product-detail .inner-thumb img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+/* Title */
+.product-detail .inner-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+/* Category */
+.product-detail .inner-category {
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.product-detail .inner-category span {
+    color: #555;
+}
+
+.product-detail .inner-category a {
+    color: #0d6efd;
+    margin-left: 6px;
+    text-decoration: none;
+}
+.product-detail .inner-stock span:hover,
+.product-detail .inner-percent span:hover {
+    opacity: 0.85;
+}
+.product-detail .inner-category a:hover {
+    text-decoration: underline;
+}
+
+/* Price */
+.product-detail .inner-price-new {
+    font-size: 26px;
+    font-weight: 700;
+    color: green;
+    margin-bottom: 8px;
+}
+
+.product-detail .inner-price-old {
+    font-size: 18px;
+    color: #888;
+    text-decoration: line-through;
+    margin-bottom: 8px;
+}
+
+/* Discount */
+.product-detail .inner-percent {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.product-detail .inner-stock span {
+    font-weight: 600;
+    color: white;
+    background: green;
+    padding: 4px 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.product-detail .inner-percent span {
+    color: white;
+    font-weight: 600;
+    background: red;
+    padding: 4px 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* Stock */
+.product-detail .inner-stock {
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+
+/* Form add to cart */
+.product-detail form {
+    max-width: 220px;
+}
+
+.product-detail form input[type="number"] {
+    text-align: center;
+}
+
+.product-detail form button {
+    width: 100%;
+    font-weight: 600;
+}
+
+/* Description */
+.product-detail .inner-desc {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    line-height: 1.7;
+}
+
+.product-detail .inner-desc img {
+    max-width: 100%;
+    height: auto;
+}
+/* End Detail */
