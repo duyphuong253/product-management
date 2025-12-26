@@ -1,11 +1,13 @@
 extends ../../layouts/default.pug
 include ../../mixins/box-head.pug
+include ../../mixins/alert.pug
 
 block main
     .product-detail
         .container.my-5
         .row
             .col-6
+                //- +alert-success(3000)
                 .inner-thumb
                     img(src=product.thumbnail, alt=product.title)
             .col-6

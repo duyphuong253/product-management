@@ -101,7 +101,8 @@ module.exports.changeStatus = async (req, res) =>{
             status: status});
     
     req.flash("success", "Cập nhật trạng thái sản phẩm thành công!");
-    res.redirect("/admin/products");
+    // res.redirect("/admin/products");
+    res.redirect(req.get("referer") || "/");
 }
 
 // [PATCH] /admin/products/change-multi

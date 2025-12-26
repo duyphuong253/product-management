@@ -37,9 +37,8 @@ module.exports.addPost = async (req, res) => {
             }
         );
     }
-
     
-
     req.flash("success", "Đã thêm sản phẩm vào giỏ hàng");
     res.redirect(req.get("referer") || "/");
 }
+
