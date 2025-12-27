@@ -1,0 +1,47 @@
+extends ../../layouts/default.pug
+include ../../mixins/alert.pug
+include ../../mixins/box-head.pug
+
+
+//- block main
+//-     +alert-error(3000)
+//-     .container.my-3
+//-         .row
+//-             .col-12
+//-                 +box-head("Thông tin tài khoản")
+
+block main
+    .container.my-3
+        .row
+            .col-12
+                +box-head("Thông tin tài khoản")
+
+                .card(style="max-width: 600px")
+                    .card-body
+                        .text-center.mb-4
+
+                        if user.fullName
+                            p
+                                | Họ tên:
+                                b.ms-2 #{user.fullName}
+
+                        if user.email
+                            p
+                                | Email:
+                                b.ms-2 #{user.email}
+
+                        if user.phone
+                            p
+                                | Số điện thoại:
+                                b.ms-2 #{user.phone}
+
+                        p
+                            | Trạng thái:
+                            if user.status === "active"
+                                span.badge.bg-success.ms-2 Hoạt động
+                            else
+                                span.badge.bg-secondary.ms-2 Dừng hoạt động
+
+                        a.btn.btn-primary.mt-3(
+                            href=`${prefixAdmin}/my-account/edit`
+                        ) Chỉnh sửa thông tin

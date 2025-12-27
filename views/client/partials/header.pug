@@ -35,6 +35,10 @@ header.header
                         li
                             a(href="/cart") Giỏ hàng (#{miniCart ? miniCart.totalQuantity : 0})
                         if(user)
+                            li  
+                                a(href="/user/info") #{user.fullName}
+                                a(href="/user/info") 
+                                    img(src=user.avatar)
                             li
                                 a(href="/user/logout") Đăng xuất
                         else
@@ -42,5 +46,7 @@ header.header
                                 a(href="/user/login") Đăng nhập
                             li
                                 a(href="/user/register") Đăng ký
+
+                
             
                             
