@@ -68,11 +68,19 @@ module.exports.loginPost = async (req, res) =>{
         return;
     }
 
-    await Cart.updateOne({
+    const cart = await Cart.findOne({
+        user_id: user.id
+    });
+
+    if(cart){
+        res.cookie("cartId", user.tokenUser);
+    } else {
+        await Cart.updateOne({
         _id: req.cookies.cartId,
     }, {
         user_id: user.id
-    })
+    });
+    }
 
     res.cookie("tokenUser", user.tokenUser);
 
@@ -82,6 +90,7 @@ module.exports.loginPost = async (req, res) =>{
 // [GET] /user/logout
 module.exports.logout = async (req, res) =>{
     res.clearCookie("tokenUser");
+    res.clearCookie("cartId");
     res.redirect("/");
 }
 
